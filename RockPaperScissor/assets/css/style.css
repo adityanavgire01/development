@@ -1,0 +1,53 @@
+/* Reset Styles */
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root variables for colors */
+:root {
+    --background-color: #0a0a23;
+    --text-color: #ffffff;
+    --button-color: #feac32;
+    --button-hover: #f89808;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+}
+
+/* main content */
+main {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* footer styling */
+footer p {
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+
+/* Buttons */ 
+button {
+    cursor: pointer;
+    background-color: var(--button-color);
+    color: var(--background-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
