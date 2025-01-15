@@ -35,6 +35,7 @@ function resetGame() {
   playerScore = 0;
   computerScore = 0;
   resultMessage.textContent = "Game reset. Let's play again!";
+  buttonContainer.style.display = "flex"; 
   updateScoreBoard();
 }
 

@@ -51,3 +51,11 @@ button {
 button:hover {
     background-color: var(--button-hover);
 }
+
+/* Ensure consistent alignment of the buttons container */
+button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
