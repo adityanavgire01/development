@@ -22,7 +22,7 @@ function addBookToLibrary(title, author, pages, isRead) {
 
 function displayBooks() {
     const libraryContainer = document.getElementById("library-container");
-    libraryContainer.innerHTML = ""; // clear previous container
+    libraryContainer.innerHTML = ""; // Clear previous content
 
     myLibrary.forEach((book, index) => {
         const bookDiv = document.createElement("div");
@@ -31,12 +31,22 @@ function displayBooks() {
             <h3>${book.title}</h3>
             <p><strong>Author:</strong> ${book.author}</p>
             <p><strong>Pages:</strong> ${book.pages}</p>
-            <p><strong>Read:</strong> ${book.isRead ? "Yes" : "No"}<p>
-            <hr>
+            <p><strong>Read:</strong> ${book.isRead ? "Yes" : "No"}</p>
+            <button class="remove-btn" data-index="${index}">Remove</button>
         `;
         libraryContainer.appendChild(bookDiv);
     });
+
+    // Attach event listeners to remove buttons
+    document.querySelectorAll(".remove-btn").forEach(button => {
+        button.addEventListener("click", (event) => {
+            const bookIndex = event.target.getAttribute("data-index");
+            myLibrary.splice(bookIndex, 1); // Remove book from array
+            displayBooks(); // Refresh the display
+        });
+    });
 }
+
 
 document.getElementById("new-book-btn").addEventListener("click", () => {
     document.getElementById("book-dialog").showModal();
