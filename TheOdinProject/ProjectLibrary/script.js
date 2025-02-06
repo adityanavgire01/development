@@ -43,7 +43,7 @@ document.getElementById("new-book-btn").addEventListener("click", () => {
 });
 
 document.getElementById("close-dialog").addEventListener("click", () => {
-    document.getElementById("book-dialog").closest();
+    document.getElementById("book-dialog").close();
 });
 
 document.getElementById("book-form").addEventListener("submit", (event) => {
