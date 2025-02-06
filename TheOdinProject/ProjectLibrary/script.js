@@ -14,6 +14,10 @@ function Book(title, author, pages, isRead) {
     this.isRead = isRead;
 }
 
+Book.prototype.toggleReadStatus = function() {
+    this.isRead = !this.isRead;
+}
+
 function addBookToLibrary(title, author, pages, isRead) {
     const newBook = new Book(title, author, pages, isRead);
     myLibrary.push(newBook);
@@ -32,9 +36,19 @@ function displayBooks() {
             <p><strong>Author:</strong> ${book.author}</p>
             <p><strong>Pages:</strong> ${book.pages}</p>
             <p><strong>Read:</strong> ${book.isRead ? "Yes" : "No"}</p>
+            <button class="toggle-read-btn" data-index="${index}">Toggle Read</button>
             <button class="remove-btn" data-index="${index}">Remove</button>
         `;
         libraryContainer.appendChild(bookDiv);
+    });
+
+    // Attach event listeners to toggle read status buttons
+    document.querySelectorAll(".toggle-read-btn").forEach(button => {
+        button.addEventListener("click", (event) => {
+            const bookIndex = event.target.getAttribute("data-index");
+            myLibrary[bookIndex].toggleReadStatus(); // Toggle read status
+            displayBooks(); // Refresh the display
+        });
     });
 
     // Attach event listeners to remove buttons
