@@ -1,3 +1,4 @@
+
 .container {
     text-align: center;
     font-family: Arial, sans-serif;
@@ -24,7 +25,7 @@
 }
 
 .cell:hover {
-    background: #f5f5f5;
+    background: #a3a1a1;
 }
 
 .status {
@@ -45,4 +46,4 @@ button {
 
 button:hover {
     background: #444;
-} 
+}

@@ -1,3 +1,4 @@
+
 const board = document.getElementById('board');
 const cells = document.querySelectorAll('[data-cell]');
 const status = document.getElementById('status');
@@ -68,4 +69,5 @@ cells.forEach(cell => {
 restartButton.addEventListener('click', restartGame);
 
 // Initialize game status
+
 status.textContent = `Player ${currentPlayer}'s turn`; 
