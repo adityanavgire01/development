@@ -25,8 +25,34 @@ function handleCellClick(e) {
     gameState[cellIndex] = currentPlayer;
     cell.textContent = currentPlayer;
 
+    if (checkWin()) {
+        gameActive = false;
+        status.textContent = `Player ${currentPlayer} wins!`;
+        return;
+    }
+
+    if (checkDraw()) {
+        gameActive = false;
+        status.textContent = "Game ended in a draw!";
+        return;
+    }
+
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
     status.textContent = `Player ${currentPlayer}'s turn`;
+
+    function checkWin() {
+        return winningCombinations.some(combination => {
+            return combination.every(index => {
+                return gameState[index] === currentPlayer;
+            });
+        });
+    }
+
+    function checkDraw() {
+        return gameState.every(cell => cell !== '');
+    }
+
+    
     
 }
 
