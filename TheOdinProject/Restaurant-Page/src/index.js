@@ -1,7 +1,7 @@
 import loadHome from './home';
 import loadMenu from './menu';
 import loadContact from './contact';
-import './styles.css'
+import './styles.css';
 
 // functions to add event listners to buttons
 function addNavEvents() {
