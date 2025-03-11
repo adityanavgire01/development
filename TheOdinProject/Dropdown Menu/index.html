@@ -7,27 +7,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <!-- first dropdown -->
-         <div class="dropdown" data-trigger="click">
-            <button class="dropdown-toggle">Products</button>
-            <ul class="dropdown-menu">
-                <li><a href="#">Product 1</a></li>
-                <li><a href="#">Product 2</a></li>
-                <li><a href="#">Product 3</a></li>
-            </ul>
-         </div>
 
-         <!-- second drop down -->
-          <div class="dropdown" data-trigger="hover">
-            <button class="dropdown-toggle">Services</button>
-            <ul class="dropdown-menu">
-                <li><a href="#">Service 1</a></li>
-                <li><a href="#">Service 2</a></li>
-                <li><a href="#">Service 3</a></li>
-            </ul>
-          </div>
-    </nav>
+    <!-- Click-based dropdown -->
+    <div class="dropdown click-dropdown">
+        <button class="dropdown-btn">Click Menu</button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+        </ul>
+    </div>
+
+    <!-- Hover-based dropdown -->
+    <div class="dropdown hover-dropdown">
+        <button class="dropdown-btn">Hover Menu</button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Item A</a></li>
+            <li><a href="#">Item B</a></li>
+            <li><a href="#">Item C</a></li>
+        </ul>
+    </div>
 
     <script src="script.js"></script>
 </body>
