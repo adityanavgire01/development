@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Carousel</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <div class="carousel">
+            <div class="carousel-slider">
+                <img src="image1.png" alt="Image 1" class="slide active">
+                <img src="image2.png" alt="Image 2" class="slide">
+                <img src="image3.png" alt="Image 3" class="slide">
+            </div>
+            
+            <!-- navigation arrows -->
+             <button class="prev">&#10094;</button>
+             <button class="next">&#10095;</button>
+
+            <!-- navigation dots -->
+            <div class="dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+
+        </div>
+
+        <script src="script.js"></script>
+        
+    </body>
+</html>
